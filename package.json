@@ -32,6 +32,7 @@
     "babel-register": "^6.3.13",
     "chai": "^3.4.1",
     "commitizen": "^2.7.3",
+    "condition-circle": "^1.2.0",
     "cz-conventional-changelog": "^1.1.5",
     "del": "^2.2.0",
     "glob": "^6.0.3",
@@ -67,5 +68,8 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
+  },
+  "release": {
+    "verifyConditions": "condition-circle"
   }
 }
