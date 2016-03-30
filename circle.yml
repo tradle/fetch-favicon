@@ -5,7 +5,5 @@ machine:
 test:
   override:
     - gulp coverage
-
-deployment:
-  override:
+  post:
     - npm run semantic-release || true
