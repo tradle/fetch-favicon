@@ -1,7 +1,56 @@
-const fetchFavicon = {
-  greet () {
-    return 'hello'
-  }
+'use strict'
+
+const x = require('x-ray')()
+const Url = require('url')
+const config = require('./config')
+const markActiveFavicon = require('./markActiveFavicon')
+
+function getFavicons (url) {
+  return x(url, config.selectors.join(), [{
+    href: '@href',
+    content: '@content',
+    property: '@property',
+    rel: '@rel',
+    name: '@name',
+    sizes: '@sizes'
+  }])
 }
 
-export default fetchFavicon
+export { fetchFavicon as default }
+
+export
+function fetchFavicon (url, size) {
+  return fetchFavicons(url, size)
+  .then((favicons) => {
+    const active = favicons.find((favicon) => favicon.active)
+    return active
+  })
+}
+
+export
+function fetchFavicons (url, size) {
+  return new Promise(function (resolve, reject) {
+    try {
+      getFavicons(url)((err, favicons) => {
+        if (err) {
+          throw err
+        }
+        favicons.push({
+          href: Url.resolve(url, 'favicon.ico'),
+          name: 'favicon.ico'
+        })
+
+        favicons = favicons.map((favicon) => ({
+          href: favicon.href || favicon.content,
+          name: favicon.name || favicon.rel || favicon.property,
+          size: Math.min.apply(null, (favicon.sizes || '').split(/[^0-9\.]+/g)) || undefined
+        }))
+
+        markActiveFavicon(favicons, size)
+        return resolve(favicons)
+      })
+    } catch (e) {
+      reject(e)
+    }
+  })
+}

@@ -56,6 +56,7 @@
     "isparta": "^4.0.0",
     "json-loader": "^0.5.3",
     "mocha": "^2.3.4",
+    "nock": "^7.7.2",
     "semantic-release": "^4.3.5",
     "sinon": "^1.17.2",
     "sinon-chai": "^2.8.0",
@@ -74,5 +75,8 @@
   },
   "release": {
     "verifyConditions": "condition-circle"
+  },
+  "dependencies": {
+    "x-ray": "^2.2.0"
   }
 }
