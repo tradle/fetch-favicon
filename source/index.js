@@ -1,7 +1,7 @@
 const fetchFavicon = {
-  greet() {
-    return 'hello';
+  greet () {
+    return 'hello'
   }
-};
+}
 
-export default fetchFavicon;
+export default fetchFavicon
