@@ -1,5 +1,5 @@
 
-# <img src="/img/logo.png" width="48"/>
+# ![fetch-favicon](/img/logo.png)
 
 [![Circle CI](https://circleci.com/gh/meltwater/fetch-favicon.svg?style=svg&circle-token=58431fbfc2ecc57479f4b9255afb806ccff83c6b)](https://circleci.com/gh/meltwater/fetch-favicon)
 [![Dependency Status](https://david-dm.org/meltwater/fetch-favicon.svg)](https://david-dm.org/meltwater/fetch-favicon)
