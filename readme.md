@@ -4,6 +4,7 @@
 [![Dependency Status](https://david-dm.org/meltwater/fetch-favicon.svg)](https://david-dm.org/meltwater/fetch-favicon)
 [![devDependency Status](https://david-dm.org/meltwater/fetch-favicon/dev-status.svg)](https://david-dm.org/meltwater/fetch-favicon#info=devDependencies)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com)
+[![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
 
 Favicons can be difficult. They come in several different formats, no page seems to have them all, and it is hard to know which one to use when you want the best. `fetch-favicon` takes the complexity out by finding them all and choosing the best for you.
 
@@ -17,9 +18,13 @@ npm install @meltwater/fetch-favicon
 ### getFavicon(url, [size])
 
 ```javascript
-const getFavicon = require('@meltwater/fetch-favicon')
+// using an ES6 transpiler, like babel
+import fetchFavicon from '@meltwater/fetch-favicon'
 
-getFavicon('https://www.github.com')
+// not using an ES6 transpiler
+var fetchFavicon = require('@meltwater/fetch-favicon').fetchFavicon
+
+fetchFavicon('https://www.github.com')
 
 /*
 'https://github.com/apple-touch-icon.png'
@@ -34,9 +39,13 @@ getFavicon('https://www.github.com')
 ### getFavicons(url)
 
 ```javascript
-const getFavicons = require('@meltwater/fetch-favicon')
+// using an ES6 transpiler, like babel
+import { fetchFavicons } from '@meltwater/fetch-favicon'
 
-getFavicons('https://www.github.com')
+// not using an ES6 transpiler
+var fetchFavicons = require('@meltwater/fetch-favicon').fetchFavicons
+
+fetchFavicons('https://www.github.com')
 
 /*
 [
@@ -70,6 +79,15 @@ getFavicons('https://www.github.com')
   - _active_: _(bool)_ `true` for the favicon returned by `getFavicon`. `undefined` for all others.
 
 ## Contributing
+
+#### Code Conventions
+Use [standard](http://standardjs.com/). CI won't pass without it.
+
+#### Tests
+Add tests where appropriate. See the test [readme](/test/readme.md) for some suggestions.
+
+#### Semantic Versioning
+Format commit messages to conform to [conventional-changelog](https://github.com/ajoslin/conventional-changelog). This drives the semantic versioning of the module.
 
 ## Additional Information
 
