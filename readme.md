@@ -85,7 +85,7 @@ fetchFavicons('https://www.github.com')
 Use [standard](http://standardjs.com/). CI won't pass without it.
 
 #### Tests
-Add tests where appropriate. See the test [readme](/test/readme.md) for some suggestions.
+Add tests where appropriate. See the test [readme](/test/unit/readme.md) for some suggestions.
 
 #### Semantic Versioning
 Format commit messages to conform to [conventional-changelog](https://github.com/ajoslin/conventional-changelog). This drives the semantic versioning of the module.
