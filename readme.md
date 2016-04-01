@@ -5,7 +5,7 @@
 [![devDependency Status](https://david-dm.org/meltwater/fetch-favicon/dev-status.svg)](https://david-dm.org/meltwater/fetch-favicon#info=devDependencies)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com)
 
-Favicons can be difficult. They come in several different formats, no page seems to have them all, and it is hard to know which one to use when you want the best. `fetch-favicon` takes the complexity out by finding them all and choosing the best.
+Favicons can be difficult. They come in several different formats, no page seems to have them all, and it is hard to know which one to use when you want the best. `fetch-favicon` takes the complexity out by finding them all and choosing the best for you.
 
 ## Installation
 
