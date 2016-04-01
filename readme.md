@@ -1,4 +1,3 @@
-
 # ![fetch-favicon](/img/logo.png)
 
 [![Circle CI](https://circleci.com/gh/meltwater/fetch-favicon.svg?style=svg&circle-token=58431fbfc2ecc57479f4b9255afb806ccff83c6b)](https://circleci.com/gh/meltwater/fetch-favicon)
@@ -78,4 +77,4 @@ getFavicons('https://www.github.com')
 
 ## License
 
-[MIT]
+MIT

@@ -1,7 +1,7 @@
 {
   "name": "@meltwater/fetch-favicon",
   "version": "0.0.1",
-  "description": "",
+  "description": "Fetch a great looking favicon from a website",
   "main": "dist/index.js",
   "scripts": {
     "test": "gulp",
@@ -16,8 +16,8 @@
     "type": "git",
     "url": "https://github.com/meltwater/fetch-favicon.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [ "favicon", "logo", "icon", "ico" ],
+  "author": "Meltwater",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/meltwater/fetch-favicon/issues"
