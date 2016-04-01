@@ -5,6 +5,7 @@
 [![devDependency Status](https://david-dm.org/meltwater/fetch-favicon/dev-status.svg)](https://david-dm.org/meltwater/fetch-favicon#info=devDependencies)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com)
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
+[![npm version](https://badge.fury.io/js/%40meltwater%2Ffetch-favicon.svg)](https://badge.fury.io/js/%40meltwater%2Ffetch-favicon)
 
 Favicons can be difficult. They come in several different formats, no page seems to have them all, and it is hard to know which one to use when you want the best. `fetch-favicon` takes the complexity out by finding them all and choosing the best for you.
 
