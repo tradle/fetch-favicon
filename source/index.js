@@ -23,7 +23,7 @@ function fetchFavicon (url, size) {
   return fetchFavicons(url, size)
   .then((favicons) => {
     const active = favicons.find((favicon) => favicon.active)
-    return active
+    return active.href
   })
 }
 
@@ -40,11 +40,19 @@ function fetchFavicons (url, size) {
           name: 'favicon.ico'
         })
 
-        favicons = favicons.map((favicon) => ({
-          href: favicon.href || favicon.content,
-          name: favicon.name || favicon.rel || favicon.property,
-          size: Math.min.apply(null, (favicon.sizes || '').split(/[^0-9\.]+/g)) || undefined
-        }))
+        favicons = favicons.map((favicon) => {
+          const f = {
+            href: favicon.href || favicon.content,
+            name: favicon.name || favicon.rel || favicon.property,
+            size: Math.min.apply(null, (favicon.sizes || '').split(/[^0-9\.]+/g)) || undefined
+          }
+
+          if (!f.size) {
+            delete f.size
+          }
+
+          return f
+        })
 
         markActiveFavicon(favicons, size)
         return resolve(favicons)

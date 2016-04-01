@@ -14,7 +14,7 @@ describe('icon', () => {
   })
 
   testCases.forEach((testCase, index) => {
-    it('should find a favicon in ' + testCase.fileName, (done) => {
+    it('should find a favicon in ' + testCase.fileName, () => {
       const exampleUrl = 'http://example.com/'
       const scope = nock(exampleUrl)
         .get('/')
@@ -23,11 +23,10 @@ describe('icon', () => {
       config.selectors = testCase.selectors || config.selectors
       config.predicates = testCase.predicates || config.predicates
 
-      fetchFavicon(exampleUrl, testCase.minSize)
+      return fetchFavicon(exampleUrl, testCase.minSize)
         .then((actual) => {
-          expect(actual, testCase.response)
+          expect(actual).to.equal(testCase.response)
           scope.done()
-          done()
         })
     })
   })
