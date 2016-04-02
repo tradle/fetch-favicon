@@ -32,10 +32,10 @@ fetchFavicon('https://www.github.com')
 */
 ```
 #### Arguments
-- __url__: the address of the web page to be searched for favicons
-- __size__: _(optional)_ an integer that represents a prefered minimum width/height of the favicon. If none of the retrieved favicons meet this constraint or the size information is not available, fetch-favicon will still return a favicon.
+- __url:__ the address of the web page to be searched for favicons
+- __size:__ _(optional)_ an integer that represents a prefered minimum width/height of the favicon. If none of the retrieved favicons meet this constraint or the size information is not available, fetch-favicon will still return a favicon.
 
-- __returns__: the address of a favicons. If no favicons are found it will return the address of the `favicon.ico` off of the root (i.e. `https://www.github.com/favicon.ico`)
+- __returns:__ the address of a favicons. If no favicons are found it will return the address of the `favicon.ico` off of the root (i.e. `https://www.github.com/favicon.ico`)
 
 ### getFavicons(url, [size])
 
@@ -70,14 +70,14 @@ fetchFavicons('https://www.github.com')
 */
 ```
 #### Arguments
-- __url__: the address of the web page to be searched for favicons
-- __size__: _(optional)_ an integer that represents a prefered minimum width/height of the favicon.
+- __url:__ the address of the web page to be searched for favicons
+- __size:__ _(optional)_ an integer that represents a prefered minimum width/height of the favicon.
 
-- __returns__: an array of all the favicons found on the web page.
-  - _href_: _(string)_ location of the favicon image
-  - _name_: _(string)_ type of favicon
-  - _size_: _(int)_ size of favicon (if available)
-  - _active_: _(bool)_ `true` for the favicon returned by `getFavicon`. `undefined` for all others.
+- __returns:__ an array of all the favicons found on the web page.
+  - _href:_ _(string)_ location of the favicon image
+  - _name:_ _(string)_ type of favicon
+  - _size:_ _(int)_ size of favicon (if available)
+  - _active:_ _(bool)_ `true` for the favicon returned by `getFavicon`. `undefined` for all others.
 
 ## Contributing
 
