@@ -12,7 +12,7 @@ Favicons can be difficult. They come in several different formats, no page seems
 ## Installation
 
 ```
-npm install @meltwater/fetch-favicon
+npm install @meltwater/fetch-favicon --save
 ```
 
 ## Using fetch-favicon
