@@ -37,7 +37,7 @@ fetchFavicon('https://www.github.com')
 
 - __returns__: the address of a favicons. If no favicons are found it will return the address of the `favicon.ico` off of the root (i.e. `https://www.github.com/favicon.ico`)
 
-### getFavicons(url)
+### getFavicons(url, [size])
 
 ```javascript
 // using an ES6 transpiler, like babel
