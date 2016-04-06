@@ -30,35 +30,31 @@ function fetchFavicon (url, size) {
 export
 function fetchFavicons (url, size) {
   return new Promise(function (resolve, reject) {
-    try {
-      getFavicons(url)((err, favicons) => {
-        if (err) {
-          throw err
-        }
-        favicons.push({
-          href: Url.resolve(url, 'favicon.ico'),
-          name: 'favicon.ico'
-        })
-
-        favicons = favicons.map((favicon) => {
-          const f = {
-            href: favicon.href || favicon.content,
-            name: favicon.name || favicon.rel || favicon.property,
-            size: Math.min.apply(null, (favicon.sizes || '').split(/[^0-9\.]+/g)) || undefined
-          }
-
-          if (!f.size) {
-            delete f.size
-          }
-
-          return f
-        })
-
-        markActiveFavicon(favicons, size)
-        return resolve(favicons)
+    getFavicons(url)((err, favicons) => {
+      if (err) {
+        reject(err)
+      }
+      favicons.push({
+        href: Url.resolve(url, 'favicon.ico'),
+        name: 'favicon.ico'
       })
-    } catch (e) {
-      reject(e)
-    }
+
+      favicons = favicons.map((favicon) => {
+        const f = {
+          href: favicon.href || favicon.content,
+          name: favicon.name || favicon.rel || favicon.property,
+          size: Math.min.apply(null, (favicon.sizes || '').split(/[^0-9\.]+/g)) || undefined
+        }
+
+        if (!f.size) {
+          delete f.size
+        }
+
+        return f
+      })
+
+      markActiveFavicon(favicons, size)
+      return resolve(favicons)
+    })
   })
 }
