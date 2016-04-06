@@ -32,7 +32,7 @@ function fetchFavicons (url, size) {
   return new Promise(function (resolve, reject) {
     getFavicons(url)((err, favicons) => {
       if (err) {
-        reject(err)
+        return reject(err)
       }
       favicons.push({
         href: Url.resolve(url, 'favicon.ico'),
