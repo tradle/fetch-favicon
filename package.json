@@ -1,5 +1,5 @@
 {
-  "name": "@meltwater/fetch-favicon",
+  "name": "fetch-favicon",
   "version": "0.0.1",
   "description": "Fetch a great looking favicon from a website",
   "main": "dist/index.js",
