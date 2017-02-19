@@ -1,6 +1,6 @@
 {
   "name": "fetch-favicon",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Fetch a great looking favicon from a website",
   "main": "dist/index.js",
   "scripts": {
@@ -14,15 +14,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/meltwater/fetch-favicon.git"
+    "url": "https://github.com/gkovacs/fetch-favicon.git"
   },
   "keywords": [ "favicon", "logo", "icon", "ico" ],
   "author": "Meltwater",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/meltwater/fetch-favicon/issues"
+    "url": "https://github.com/gkovacs/fetch-favicon/issues"
   },
-  "homepage": "https://github.com/meltwater/fetch-favicon",
+  "homepage": "https://github.com/gkovacs/fetch-favicon",
   "devDependencies": {
     "babel-core": "^6.3.26",
     "babel-eslint": "6.0.0",
