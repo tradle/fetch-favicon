@@ -1,5 +1,5 @@
 {
-  "name": "fetch-favicon",
+  "name": "@getstation/fetch-favicon",
   "version": "0.0.2",
   "description": "Fetch a great looking favicon from a website",
   "main": "dist/index.js",
@@ -10,19 +10,20 @@
     "watch": "gulp watch",
     "build": "gulp build",
     "coverage": "gulp coverage",
-    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post",
+    "prepublishOnly": "npm run build"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gkovacs/fetch-favicon.git"
+    "url": "https://github.com/getstation/fetch-favicon"
   },
   "keywords": [ "favicon", "logo", "icon", "ico" ],
   "author": "Meltwater",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/gkovacs/fetch-favicon/issues"
+    "url": "https://github.com/getstation/fetch-favicon/issues"
   },
-  "homepage": "https://github.com/gkovacs/fetch-favicon",
+  "homepage": "https://github.com/getstation/fetch-favicon",
   "devDependencies": {
     "babel-core": "^6.3.26",
     "babel-eslint": "6.0.0",
