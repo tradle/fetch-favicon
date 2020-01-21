@@ -1,6 +1,6 @@
 {
   "name": "@getstation/fetch-favicon",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Fetch a great looking favicon from a website",
   "main": "dist/index.js",
   "scripts": {
@@ -17,7 +17,12 @@
     "type": "git",
     "url": "https://github.com/getstation/fetch-favicon"
   },
-  "keywords": [ "favicon", "logo", "icon", "ico" ],
+  "keywords": [
+    "favicon",
+    "logo",
+    "icon",
+    "ico"
+  ],
   "author": "Meltwater",
   "license": "MIT",
   "bugs": {
