@@ -15,8 +15,13 @@ function getFavicons (url) {
   }])
 }
 
+const emptyDataContents = [
+  'data:/,',
+  'data:/'
+]
+
 function isEmptyData (favicon) {
-  return !favicon.href && favicon.content === 'data:/'
+  return !favicon.href && emptyDataContents.includes(favicon.content)
 }
 
 function isNotEmptyData (favicon) {
