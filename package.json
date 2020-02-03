@@ -1,6 +1,6 @@
 {
   "name": "@getstation/fetch-favicon",
-  "version": "0.0.4-rc.0",
+  "version": "0.0.4-rc.1",
   "description": "Fetch a great looking favicon from a website",
   "main": "dist/index.js",
   "scripts": {
