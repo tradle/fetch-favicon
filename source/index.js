@@ -21,7 +21,8 @@ const emptyDataContents = [
 ]
 
 function isEmptyData (favicon) {
-  return !favicon.href && emptyDataContents.includes(favicon.content)
+  if (favicon.href) return emptyDataContents.includes(favicon.href)
+  return emptyDataContents.includes(favicon.content)
 }
 
 function isNotEmptyData (favicon) {
