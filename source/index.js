@@ -1,7 +1,6 @@
 'use strict'
 
 const x = require('x-ray')()
-const Url = require('url')
 const config = require('./config')
 const markActiveFavicon = require('./markActiveFavicon').default
 
@@ -14,6 +13,14 @@ function getFavicons (url) {
     name: '@name',
     sizes: '@sizes'
   }])
+}
+
+function isEmptyData (favicon) {
+  return !favicon.href && favicon.content === 'data:/'
+}
+
+function isNotEmptyData (favicon) {
+  return !isEmptyData(favicon)
 }
 
 function setFetchFaviconTimeout (ms) {
@@ -38,12 +45,8 @@ function fetchFavicons (url, size) {
       if (err) {
         return reject(err)
       }
-      favicons.push({
-        href: Url.resolve(url, 'favicon.ico'),
-        name: 'favicon.ico'
-      })
 
-      favicons = favicons.map((favicon) => {
+      favicons = favicons.filter(isNotEmptyData).map((favicon) => {
         const f = {
           href: favicon.href || favicon.content,
           name: favicon.name || favicon.rel || favicon.property,
