@@ -3,6 +3,7 @@
 const x = require('x-ray')()
 const config = require('./config')
 const markActiveFavicon = require('./markActiveFavicon').default
+const Url = require('url')
 
 function getFavicons (url) {
   return x(url, config.selectors.join(), [{
