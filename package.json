@@ -84,5 +84,8 @@
   },
   "dependencies": {
     "x-ray": "^2.2.0"
+  },
+  "resolutions": {
+    "graceful-fs": "4.2.3"
   }
 }
