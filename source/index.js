@@ -52,6 +52,11 @@ function fetchFavicons (url, size) {
         return reject(err)
       }
 
+      favicons.push({
+        href: Url.resolve(url, 'favicon.ico'),
+        name: 'favicon.ico'
+      })
+
       favicons = favicons.filter(isNotEmptyData).map((favicon) => {
         const f = {
           href: favicon.href || favicon.content,
