@@ -1,18 +1,13 @@
 # ![fetch-favicon](/img/logo.png)
 
-[![Circle CI](https://circleci.com/gh/meltwater/fetch-favicon.svg?style=svg&circle-token=58431fbfc2ecc57479f4b9255afb806ccff83c6b)](https://circleci.com/gh/meltwater/fetch-favicon)
-[![Dependency Status](https://david-dm.org/meltwater/fetch-favicon.svg)](https://david-dm.org/meltwater/fetch-favicon)
-[![devDependency Status](https://david-dm.org/meltwater/fetch-favicon/dev-status.svg)](https://david-dm.org/meltwater/fetch-favicon#info=devDependencies)
-[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com)
-[![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
-[![npm version](https://badge.fury.io/js/%40meltwater%2Ffetch-favicon.svg)](https://badge.fury.io/js/%40meltwater%2Ffetch-favicon)
+> Forked from `@yunyu/fetch-favicon` which is a fork of `@meltwater/fetch-favicon`. With updated dependencies.
 
 Favicons can be difficult. They come in several different formats, no page seems to have them all, and it is hard to know which one to use when you want the best. `fetch-favicon` takes the complexity out by finding them all and choosing the best for you.
 
 ## Installation
 
 ```
-npm install @meltwater/fetch-favicon --save
+npm install @tradle/fetch-favicon --save
 ```
 
 ## Using fetch-favicon
@@ -20,10 +15,10 @@ npm install @meltwater/fetch-favicon --save
 
 ```javascript
 // using an ES6 transpiler, like babel
-import fetchFavicon from '@meltwater/fetch-favicon'
+import fetchFavicon from '@tradle/fetch-favicon'
 
 // not using an ES6 transpiler
-var fetchFavicon = require('@meltwater/fetch-favicon').fetchFavicon
+var fetchFavicon = require('@tradle/fetch-favicon').fetchFavicon
 
 fetchFavicon('https://www.github.com')
 
@@ -41,10 +36,10 @@ fetchFavicon('https://www.github.com')
 
 ```javascript
 // using an ES6 transpiler, like babel
-import { fetchFavicons } from '@meltwater/fetch-favicon'
+import { fetchFavicons } from '@tradle/fetch-favicon'
 
 // not using an ES6 transpiler
-var fetchFavicons = require('@meltwater/fetch-favicon').fetchFavicons
+var fetchFavicons = require('@tradle/fetch-favicon').fetchFavicons
 
 fetchFavicons('https://www.github.com')
 
