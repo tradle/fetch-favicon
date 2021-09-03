@@ -1,22 +1,22 @@
 module.exports = [
   {
-    'fileName': 'no-favicon.html',
-    'response': [
+    fileName: 'no-favicon.html',
+    response: [
       {
-        'href': 'http://www.example.com/favicon.ico',
-        'name': 'favicon.ico',
-        'active': true
+        href: 'http://www.example.com/favicon.ico',
+        name: 'favicon.ico',
+        active: true
       }
     ]
   },
   {
-    'fileName': 'all-favicon.html',
-    'predicates': [
+    fileName: 'all-favicon.html',
+    predicates: [
       (i) => i.name === 'apple-touch-icon-precomposed',
       (i) => i.name === 'apple-touch-icon',
       (i) => i.name === 'favicon.ico'
     ],
-    'response': [{
+    response: [{
       href: 'http://example.com/apple-touch-icon.png',
       name: 'apple-touch-icon'
     }, {
@@ -44,13 +44,13 @@ module.exports = [
     }]
   },
   {
-    'fileName': 'all-favicon.html',
-    'predicates': [
+    fileName: 'all-favicon.html',
+    predicates: [
       (i) => i.name === 'apple-touch-icon',
       (i) => i.name === 'apple-touch-icon-precomposed',
       (i) => i.name === 'favicon.ico'
     ],
-    'response': [{
+    response: [{
       href: 'http://example.com/apple-touch-icon.png',
       name: 'apple-touch-icon',
       active: true
@@ -78,13 +78,13 @@ module.exports = [
     }]
   },
   {
-    'fileName': 'all-favicon.html',
-    'predicates': [
+    fileName: 'all-favicon.html',
+    predicates: [
       (i) => i.name === 'favicon.ico',
       (i) => i.name === 'apple-touch-icon',
       (i) => i.name === 'apple-touch-icon-precomposed'
     ],
-    'response': [{
+    response: [{
       href: 'http://example.com/apple-touch-icon.png',
       name: 'apple-touch-icon'
     }, {

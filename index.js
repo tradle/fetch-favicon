@@ -1,5 +1,5 @@
 const x = require('x-ray')()
-const { resolve } = require('url')
+const { URL } = require('url')
 
 const defaults = Object.freeze({
   selectors: Object.freeze([
@@ -89,7 +89,7 @@ async function fetchFavicons (url, size, config) {
   let favicons = await getFavicons(url)
 
   favicons.push({
-    href: resolve(url, 'favicon.ico'),
+    href: (new URL('favicon.ico', url)).toString(),
     name: 'favicon.ico'
   })
 
@@ -97,7 +97,7 @@ async function fetchFavicons (url, size, config) {
     const f = {
       href: favicon.href || favicon.content,
       name: favicon.name || favicon.rel || favicon.property,
-      size: Math.min.apply(null, (favicon.sizes || '').split(/[^0-9\.]+/g)) || undefined
+      size: Math.min.apply(null, (favicon.sizes || '').split(/[^0-9.]+/g)) || undefined
     }
 
     if (!f.size) {
