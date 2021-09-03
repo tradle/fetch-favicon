@@ -1,6 +1,6 @@
 {
   "name": "@tradle/fetch-favicon",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Fetch a great looking favicon from a website",
   "main": "index.js",
   "scripts": {
