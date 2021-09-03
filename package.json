@@ -83,7 +83,7 @@
     "verifyConditions": "condition-circle"
   },
   "dependencies": {
-    "x-ray": "^2.2.0"
+    "x-ray": "^2.3.4"
   },
   "resolutions": {
     "graceful-fs": "4.2.3"
