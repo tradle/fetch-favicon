@@ -1,6 +1,6 @@
 {
-  "name": "@yunyu/fetch-favicon",
-  "version": "0.0.4-rc.3",
+  "name": "@tradle/fetch-favicon",
+  "version": "0.0.5",
   "description": "Fetch a great looking favicon from a website",
   "main": "dist/index.js",
   "scripts": {
