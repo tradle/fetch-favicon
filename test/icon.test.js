@@ -19,3 +19,15 @@ testCases.forEach(testCase => {
     }
   })
 })
+
+test('non existant domain', async t => {
+  try {
+    await fetchFavicon('https://foo.bar.foo_non-existant_domain.com')
+  } catch (err) {
+    if (err.code !== 'ENOTFOUND') {
+      throw err
+    }
+    return
+  }
+  t.fail('unexpected pass')
+})
