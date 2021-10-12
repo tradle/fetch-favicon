@@ -1,6 +1,10 @@
-const x = require('x-ray')()
+const x = require('@tradle/x-ray')()
+  .driver(require('@tradle/x-ray-crawler/lib/http-driver')({
+    response: 1000,
+    deadline: 5000
+  }))
+
 const { URL } = require('url')
-const dns = require('dns').promises
 
 const defaults = Object.freeze({
   selectors: Object.freeze([
@@ -52,13 +56,6 @@ async function getFavicons (url, config) {
     ...defaults,
     ...config
   }
-
-  // The version of superagent used by x-ray-crawler is old. It causes an uncaught promise
-  // rejection if an URL that points to a non-existent host is passed-in.
-  // By resolving the host beforehand we can make sure that the unknown urls are rejected
-  // properly.
-  const parts = new URL(url)
-  await dns.resolve(parts.hostname)
 
   return await x(url, config.selectors.join(), [{
     href: '@href',
